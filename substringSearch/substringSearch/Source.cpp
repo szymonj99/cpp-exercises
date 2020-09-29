@@ -10,9 +10,9 @@ std::vector<std::pair<std::string, unsigned int>> GetSubstringsFromString(const 
 	for (unsigned int i = 0; i < ORIGINAL.length() - SUBSTRING_LENGTH; i++)
 	{
 		std::string window;
-		for (int j = 0; j < SUBSTRING_LENGTH; j++)
+		for (unsigned int j = 0; j < SUBSTRING_LENGTH; j++)
 		{
-			window += ORIGINAL[i + j];
+			window += ORIGINAL[static_cast<long long>(i) + static_cast<long long>(j)];
 		}
 		local_map[window]++;
 	}
