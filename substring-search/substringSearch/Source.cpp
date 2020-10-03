@@ -18,9 +18,11 @@ std::vector<std::pair<std::string, unsigned int>> GetSubstringsFromString(const 
 	}
 
 	std::vector<std::pair<std::string, unsigned int>> local_vector;
+	local_vector.reserve(local_map.size());
 	for (const auto& item : local_map)
 	{
 		local_vector.push_back(item);
+		//local_map.erase(item.first);
 	}
 	return local_vector;
 }
